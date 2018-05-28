@@ -1,0 +1,211 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: Arial;
+  background: black;
+  color: white;
+}
+
+header{
+  background: #34495E;
+  width: 80%;
+  height: 100px;
+  margin: auto;
+  text-align: center;
+  color: white;
+  line-height: 100px;
+}
+
+h3{
+  font-size: 16px;
+}
+
+nav{
+  background: #34495E;
+  width: 80%;
+  height: 80px;
+  margin: auto;
+  text-align: center;
+  line-height: 80px;
+}
+
+nav ul{
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav ul li{
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  list-style-type: none;
+  border: 2px solid white;
+  transition: 1s;
+}
+
+nav ul li:hover{
+  cursor: pointer;
+  background: red;
+  color: white;
+  border-color: white;
+  transition: 1s;
+}
+
+#wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: white;
+  color: black;
+  width: 80%;
+  height: 900px;
+  margin: auto;
+}
+
+#section1{
+  float: left;
+  width: 50%;
+  height: 300px;
+}
+
+#article1{
+  float: right;
+  width: 50%;
+  height: 300px;
+}
+
+#section1 *:nth-child(1), #article1 *:nth-child(1), #article2 *:nth-child(1){
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+#section1 *:nth-child(n+2), #article1 *:nth-child(n+2), #article2 *:nth-child(n+2){
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+#section2{
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+h3.title_center{
+  width: 100%;
+  text-align: center;
+}
+
+.container, .avant, .arriere{
+  width: 160px;
+  height: 240px;
+}
+.block{
+  transition: 1s;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.container:hover .block{
+  transform: rotateY(180deg);
+}
+
+.avant, .arriere{
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.arriere{
+  transform: rotateY(180deg);
+  background: white;
+  border: 1px solid gray;
+  color: black;
+  font-size: 12px;
+  text-align: center;
+}
+.avant{
+  z-index: 2;
+  transform: rotateY(0deg);
+  border: 1px solid gray
+}
+.btn{
+  margin-top: 10px;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  transition: 1s;
+}
+.btn:hover{
+  background: red;
+  color: white;
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+#section2 .block .image{
+  height: 180px;
+}
+
+#section2 .container:nth-child(1) .block .image{
+  background: url("../img/sanfrancisco.jpg") no-repeat;
+  background-size: cover;
+}
+#section2 .container:nth-child(2) .block .image{
+  background: url("../img/londres.jpeg") 0 0 no-repeat;
+  background-size: cover;
+}
+#section2 .container:nth-child(3) .block .image{
+  background: url("../img/tokyo.jpg") 0 0 no-repeat;
+  background-size: cover;
+}
+#section2 .container:nth-child(4) .block .image{
+  background: url("../img/amsterdam.jpg") 0 0 no-repeat;
+  background-size: cover;
+}
+#section2 .container .block .text{
+  height: 60px;
+}
+.nom{
+  font-size: 14px;
+  height: 14px;
+}
+
+.prix{
+  margin: 0 auto 0;
+  color: red;
+  font-weight: bold;
+}
+
+#article2{
+  float: left;
+  width: 50%;
+}
+
+#avion{
+  margin-left: 150px;
+  margin-top: 40px;
+}
+
+footer{
+  width: 80%;
+  height: 64px;
+  background: #231EC4;
+  color: blue;
+  margin: auto;
+  text-align: center;
+}
